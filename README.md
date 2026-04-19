@@ -537,6 +537,6 @@ MIT License — Copyright (c) 2026 Équipe 3
 
 <div align="center">
 
-🌱 *Fabriqué avec passion au Maroc par l'Équipe 3* 🌱
+🌱 *Fabriqué avec passion au Maroc par notre équipe * 🌱
 
 </div>
