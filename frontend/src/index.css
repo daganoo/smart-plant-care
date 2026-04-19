@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  min-height: 100vh;
+  color: #f8fafc;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.main-content {
+  min-height: calc(100vh - 80px);
+  padding: 2rem;
+}
+/* Pour les icônes dans les boutons et titres */
+.header-icon,
+.section-icon,
+.chart-icon {
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+
+.status-icon {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.25rem;
+}
+
+.status-icon.warning {
+  color: #ef4444;
+}
+
+.status-icon.success {
+  color: #4ade80;
+}
+
+.tech-icon {
+  width: 40px;
+  height: 40px;
+  color: #4ade80;
+  margin-bottom: 1rem;
+}
+
+.cta-icon {
+  width: 20px;
+  height: 20px;
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.cta-button:hover .cta-icon {
+  transform: translateX(4px);
+}
+
+.btn-icon {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+
+.weather-icon {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+  color: #4ade80;
+}

@@ -1,0 +1,570 @@
+.iot-simulation {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.sim-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.sim-header h1 {
+  font-size: 2rem;
+  color: #f8fafc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.sim-header p {
+  color: #94a3b8;
+}
+
+.header-icon {
+  width: 32px;
+  height: 32px;
+  color: #4ade80;
+}
+
+/* Container Arduino */
+.arduino-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Carte Arduino */
+.arduino-board {
+  background: rgba(30, 41, 59, 0.8);
+  border: 2px solid #4ade80;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.board-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(74, 222, 128, 0.2);
+}
+
+.board-icon {
+  width: 28px;
+  height: 28px;
+  color: #4ade80;
+}
+
+.board-header h2 {
+  color: #f8fafc;
+  font-size: 1.1rem;
+}
+
+.board-status {
+  margin-left: auto;
+  background: rgba(74, 222, 128, 0.2);
+  color: #4ade80;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+
+.pin-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.pin-label {
+  width: 30px;
+  color: #94a3b8;
+  font-size: 0.85rem;
+  font-family: monospace;
+}
+
+.pin {
+  flex: 1;
+  padding: 0.5rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.pin.analog {
+  background: rgba(59, 130, 246, 0.2);
+  color: #60a5fa;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.pin.digital {
+  background: rgba(100, 116, 139, 0.2);
+  color: #94a3b8;
+  border: 1px solid rgba(100, 116, 139, 0.3);
+}
+
+.pin.digital.active {
+  background: rgba(74, 222, 128, 0.3);
+  color: #4ade80;
+  border-color: #4ade80;
+  box-shadow: 0 0 10px rgba(74, 222, 128, 0.3);
+}
+
+/* Module Capteur */
+.sensor-module {
+  background: rgba(30, 41, 59, 0.8);
+  border: 2px solid #3b82f6;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.module-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.module-icon {
+  width: 28px;
+  height: 28px;
+  color: #3b82f6;
+}
+
+.sensor-visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.soil-probe {
+  position: relative;
+  width: 120px;
+  height: 150px;
+  background: #1e293b;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 2px solid #475569;
+}
+
+.probe {
+  position: absolute;
+  width: 8px;
+  height: 60px;
+  background: linear-gradient(to bottom, #94a3b8, #64748b);
+  border-radius: 4px;
+  top: 10px;
+}
+
+.probe.left {
+  left: 35px;
+}
+
+.probe.right {
+  right: 35px;
+}
+
+.soil-area {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.5s ease;
+}
+
+.soil-label {
+  color: white;
+  font-weight: 700;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+
+.sensor-readout {
+  width: 100%;
+}
+
+.readout-value,
+.readout-percent {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem;
+  background: rgba(15, 23, 42, 0.5);
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
+
+.readout-value .label,
+.readout-percent .label {
+  color: #94a3b8;
+}
+
+.readout-value .value {
+  color: #f8fafc;
+  font-family: monospace;
+  font-weight: 600;
+}
+
+.readout-percent .value {
+  font-weight: 700;
+}
+
+.readout-percent .value.warning {
+  color: #ef4444;
+}
+
+.readout-percent .value.good {
+  color: #4ade80;
+}
+
+/* Actionneurs */
+.actuators {
+  background: rgba(30, 41, 59, 0.8);
+  border: 2px solid #ef4444;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.actuator-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.actuator-icon {
+  width: 28px;
+  height: 28px;
+  color: #ef4444;
+}
+
+.actuator-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.actuator-card {
+  background: rgba(15, 23, 42, 0.5);
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.3s ease;
+}
+
+.actuator-card.active {
+  background: rgba(74, 222, 128, 0.15);
+  border: 1px solid rgba(74, 222, 128, 0.3);
+}
+
+.actuator-visual {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pump-body {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #475569;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.pump-rotor {
+  width: 20px;
+  height: 20px;
+  background: #475569;
+  border-radius: 50%;
+}
+
+.pump-rotor.spinning {
+  background: #4ade80;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.water-flow {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 20px;
+}
+
+.drop {
+  width: 8px;
+  height: 8px;
+  background: #3b82f6;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+}
+
+.drop.falling {
+  animation: fall 0.8s ease-in infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+}
+
+.led {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #475569;
+  border: 2px solid #64748b;
+  transition: all 0.3s ease;
+}
+
+.led.glowing {
+  background: #ef4444;
+  border-color: #ef4444;
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.6), 0 0 40px rgba(239, 68, 68, 0.3);
+}
+
+.actuator-info h3 {
+  color: #f8fafc;
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+}
+
+.actuator-info .status {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.status.on {
+  color: #4ade80;
+}
+
+.status.off {
+  color: #94a3b8;
+}
+
+/* Contrôles */
+.controls-panel {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.control-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  background: #334155;
+  color: #f8fafc;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.control-btn:hover:not(:disabled) {
+  background: #4ade80;
+  transform: translateY(-2px);
+}
+
+.control-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.control-btn.active {
+  background: #16a34a;
+  color: white;
+}
+
+.control-btn.reset {
+  background: rgba(239, 68, 68, 0.2);
+  color: #ef4444;
+}
+
+.control-btn.reset:hover {
+  background: rgba(239, 68, 68, 0.3);
+}
+
+.btn-icon {
+  width: 18px;
+  height: 18px;
+}
+
+/* Moniteur Série */
+.serial-monitor {
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(74, 222, 128, 0.3);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.monitor-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.monitor-icon {
+  width: 24px;
+  height: 24px;
+  color: #4ade80;
+}
+
+.monitor-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.code-preview {
+  background: #0f172a;
+  border-radius: 8px;
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+.code-preview pre {
+  color: #4ade80;
+  font-family: 'Courier New', monospace;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.serial-output {
+  background: #0f172a;
+  border-radius: 8px;
+  padding: 1rem;
+  font-family: 'Courier New', monospace;
+}
+
+.output-header {
+  color: #94a3b8;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid #334155;
+  padding-bottom: 0.5rem;
+}
+
+.output-line {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.35rem 0;
+  font-size: 0.85rem;
+}
+
+.output-line .timestamp {
+  color: #64748b;
+}
+
+.output-line .value {
+  color: #f8fafc;
+}
+
+.output-line .percent {
+  color: #4ade80;
+}
+
+.output-line .percent.warning {
+  color: #ef4444;
+}
+
+/* Logs */
+.logs-panel {
+  background: rgba(30, 41, 59, 0.6);
+  border: 1px solid rgba(74, 222, 128, 0.2);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.logs-panel h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #f8fafc;
+  margin-bottom: 1rem;
+}
+
+.log-icon {
+  width: 20px;
+  height: 20px;
+  color: #ef4444;
+}
+
+.logs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.log-entry {
+  display: flex;
+  gap: 1rem;
+  padding: 0.75rem;
+  background: rgba(15, 23, 42, 0.5);
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.log-entry.system {
+  border-left: 3px solid #4ade80;
+}
+
+.log-entry.manual {
+  border-left: 3px solid #3b82f6;
+}
+
+.log-entry.info {
+  border-left: 3px solid #94a3b8;
+}
+
+.log-time {
+  color: #64748b;
+  font-family: monospace;
+  min-width: 80px;
+}
+
+.log-message {
+  color: #cbd5e1;
+}
+
+@media (max-width: 968px) {
+  .arduino-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .monitor-content {
+    grid-template-columns: 1fr;
+  }
+}
