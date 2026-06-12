@@ -16,6 +16,18 @@
 
 ---
 
+## 👥 Équipe
+
+Nous sommes **l'Équipe 3** — une équipe pluridisciplinaire d'ingénieurs marocains passionnés par les technologies intelligentes.
+
+| Nom | Spécialisation | Filière / Ville |
+|---|---|---|
+| **Marouane Dagana** | Génie Logiciel & Développement | IL / Marrakech |
+| **Zineb Lagrida** | Intelligence Artificielle & Machine Learning | ADIA / Salé |
+| **Ilhame Benaazzouz** | Internet des Objets (IoT) | IISE / Youssoufia |
+
+---
+
 ## 📋 Table des Matières
 
 - [À propos du projet](#-à-propos-du-projet)
@@ -460,18 +472,6 @@ flowchart TD
 
 ---
 
-## 👥 Équipe
-
-Nous sommes **l'Équipe 3** — une équipe pluridisciplinaire d'ingénieurs marocains passionnés par les technologies intelligentes.
-
-| Nom | Spécialisation | Filière / Ville |
-|---|---|---|
-| **Marouane Dagana** | Génie Logiciel & Développement | IL / Marrakech |
-| **Zineb Lagrida** | Intelligence Artificielle & Machine Learning | ADIA / Salé |
-| **Ilhame Benaazzouz** | Internet des Objets (IoT) | IISE / Youssoufia |
-
----
-
 ## 🗺️ Feuille de route
 
 ### Version 1.0 (actuelle) ✅
@@ -538,5 +538,10 @@ MIT License — Copyright (c) 2026 Équipe 3
 <div align="center">
 
 🌱 *Fabriqué avec passion au Maroc par notre équipe * 🌱
+| Nom | Spécialisation | Filière / Ville |
+|---|---|---|
+| **Marouane Dagana** | Génie Logiciel & Développement | IL / Marrakech |
+| **Zineb Lagrida** | Intelligence Artificielle & Machine Learning | ADIA / Salé |
+| **Ilhame Benaazzouz** | Internet des Objets (IoT) | IISE / Youssoufia |
 
 </div>
